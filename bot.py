@@ -9,7 +9,7 @@ class InstagramBot():
         self.password = password
 
     def signIn(self):
-        self.browser.get('https://www.instagram.com/accounts/login/?source=auth_switcher')
+        self.browser.get('https://www.instagram.com/accounts/login/')
 
         emailInput = self.browser.find_elements_by_css_selector('form input')[0]
         passwordInput = self.browser.find_elements_by_css_selector('form input')[1]
@@ -18,9 +18,8 @@ class InstagramBot():
         passwordInput.send_keys(self.password)
         passwordInput.send_keys(Keys.ENTER)
 
-        notNow = self.browser.find_elements_by_css_selector('body > div.RnEpo.Yx5HN > div > div > div.mt3GC > button.aOOlW.HoLwm')
-
-        print len(notNow)
+        notNow = self.browser.find_elements_by_xpath('/html/body/div[3]/div/div/div[3]/button[2]')
+        notNow.send_keys(Keys.ENTER)
 
         time.sleep(2)
 
