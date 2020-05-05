@@ -24,5 +24,5 @@ class InstagramBot():
         time.sleep(2)
 
 
-bot = InstagramBot('samsam978@hvc.rr.com', 'Prg@1lte')
+bot = InstagramBot('samsam978@hvc.rr.com', 'Password')
 bot.signIn()
