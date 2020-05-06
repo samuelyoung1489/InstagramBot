@@ -11,16 +11,21 @@ class InstagramBot():
     def signIn(self):
         self.browser.get('https://www.instagram.com/accounts/login/')
 
-        emailInput = self.browser.find_elements_by_css_selector('form input')[0]
-        passwordInput = self.browser.find_elements_by_css_selector('form input')[1]
+        login_link = browser.find_element_by_xpath("//a[text()='Log in']")
+        login_link.click()
+
+        emailInput = self.browser.find_element_by_Class_name('_2hvTZ pexuQ zyHYP')
+        passwordInput = self.browser.find_element_by_Class_name('_2hvTZ pexuQ zyHYP')
 
         emailInput.send_keys(self.email)
         passwordInput.send_keys(self.password)
         passwordInput.send_keys(Keys.ENTER)
 
-        notNow = self.browser.find_elements_by_xpath('/html/body/div[3]/div/div/div[3]/button[2]')
-        notNow.send_keys(Keys.ENTER)
+        username_input = browser.find_element_by_css_selector("input[name='username']")
+        password_input = browser.find_element_by_css_selector("input[name='password']")
 
+        username_input.send_keys("<your username>")
+        password_input.send_keys("<your password>")
         time.sleep(2)
 
 
