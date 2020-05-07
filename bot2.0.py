@@ -1,8 +1,8 @@
 from instapy import InstaPy
 from instapy import smart_run
 
-insta_username = '8453417502'
-insta_password = 'Sammy123'
+insta_username = ''
+insta_password = ''
 
 #Here I am setting up the library of comments that the code will choose from
 comments = ['Nice shot! @{}',
